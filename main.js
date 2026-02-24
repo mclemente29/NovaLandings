@@ -158,28 +158,42 @@ document
             ring.classList.remove("hover"),
         );
     });
-// NAV - throttled scroll
+// NAV + BACK TO TOP - throttled scroll
+const nav = document.getElementById("nav");
+const backToTop = document.getElementById("backToTop");
+const serviciosSection = document.getElementById("servicios");
 let scrollTick = false;
 addEventListener("scroll", () => {
     if (!scrollTick) {
         scrollTick = true;
         requestAnimationFrame(() => {
             nav.classList.toggle("scrolled", scrollY > 60);
+            if (backToTop && serviciosSection) {
+                const show = scrollY >= serviciosSection.offsetTop - 200;
+                backToTop.classList.toggle("visible", show);
+            }
             scrollTick = false;
         });
     }
 });
-const nav = document.getElementById("nav");
+if (backToTop) {
+    backToTop.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
 const hb = document.getElementById("hamburger"),
     nm = document.getElementById("navMenu");
 hb.addEventListener("click", () => {
     hb.classList.toggle("open");
     nm.classList.toggle("open");
+    document.body.classList.toggle("menu-open");
 });
 nm.querySelectorAll("a").forEach((a) =>
     a.addEventListener("click", () => {
         hb.classList.remove("open");
         nm.classList.remove("open");
+        document.body.classList.remove("menu-open");
     }),
 );
 // SCROLL REVEAL
@@ -200,10 +214,12 @@ document.querySelectorAll(".faq-q").forEach((q) => {
     q.addEventListener("click", () => {
         const item = q.parentElement;
         const o = item.classList.contains("open");
-        document
-            .querySelectorAll(".faq-item")
-            .forEach((i) => i.classList.remove("open"));
-        if (!o) item.classList.add("open");
+        document.querySelectorAll(".faq-item").forEach((i) => i.classList.remove("open"));
+        document.querySelectorAll(".faq-q").forEach((b) => b.setAttribute("aria-expanded", "false"));
+        if (!o) {
+            item.classList.add("open");
+            q.setAttribute("aria-expanded", "true");
+        }
     });
 });
 // COUNTER

@@ -4,10 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nova Landings — Tu Web Profesional</title>
+    <meta name="description" content="Creamos landing pages profesionales desde 120€. Diseño web a medida, SEO incluido y entrega en 5-14 días. Pago único, sin mensualidades. Tu negocio merece una web que impresione.">
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn, Telegram) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://novalandings.es/">
+    <meta property="og:title" content="Nova Landings — Páginas web profesionales desde 120€">
+    <meta property="og:description" content="Landing pages que convierten visitantes en clientes. Diseño a medida, SEO incluido y entrega en 5-14 días.">
+    <meta property="og:image" content="https://novalandings.es/assets/logo-black.png">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Nova Landings">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nova Landings — Páginas web profesionales desde 120€">
+    <meta name="twitter:description" content="Landing pages que convierten visitantes en clientes. Diseño a medida, SEO incluido y entrega en 5-14 días.">
+    <meta name="twitter:image" content="https://novalandings.es/assets/logo-black.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
     rel="stylesheet"/>
-    <link rel="icon" href="assets\favicon\icono-black.ico" />
+    <link rel="icon" href="assets/favicon/icono-black.ico" />
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -18,7 +35,7 @@
     <nav id="nav">
       <div class="nav-logo">
         <img
-          src="assets\logo\logo-white.png"
+          src="assets/logo/logo-white.png"
           alt="Nova Landings"
           class="nav-logo-img"
         />
@@ -28,7 +45,7 @@
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#proceso">Proceso</a></li>
         <li><a href="#precios">Precios</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#faq">Preguntas Frecuentes</a></li>
         <li><a href="#contacto" class="nav-cta">Contáctanos</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -45,7 +62,7 @@
           </h1>
           <p class="hero-desc">
             Creamos landing pages que convierten visitantes en clientes. Diseño
-            premium, lista en 3-5 días y sin mensualidades. Tu negocio merece
+            premium, lista en 5-14 días y sin mensualidades. Tu negocio merece
             una presencia digital que impresione.
           </p>
           <div class="hero-actions">
@@ -66,7 +83,8 @@
             <a href="#proceso" class="btn btn-ghost">Ver cómo funciona</a>
           </div>
         </div>
-        <div class="hero-right">
+        <!-- Mockup desktop (pantalla de ordenador) -->
+        <div class="hero-right hero-right-desktop">
           <div class="mockup-wrapper">
             <div class="mockup-glow"></div>
             <div class="mockup-screen">
@@ -77,12 +95,60 @@
                 <div class="mockup-url">tunegocio.es</div>
               </div>
               <div class="mockup-body">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="mockup-nav">
+                  <div class="line line-logo"></div>
+                  <div class="mockup-nav-links">
+                    <div class="line line-nav-link"></div>
+                    <div class="line line-nav-link"></div>
+                    <div class="line line-nav-link"></div>
+                  </div>
+                </div>
+                <div class="mockup-hero-section">
+                  <div class="line line-heading"></div>
+                  <div class="line line-subheading"></div>
+                  <div class="line line-text"></div>
+                  <div class="line line-cta-btn"></div>
+                </div>
+                <div class="mockup-cards">
+                  <div class="mockup-card"></div>
+                  <div class="mockup-card"></div>
+                  <div class="mockup-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mockup móvil (teléfono) -->
+        <div class="hero-right hero-right-mobile">
+          <div class="phone-wrapper">
+            <div class="mockup-glow"></div>
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="phone-status-bar">
+                  <span>9:41</span>
+                  <div class="phone-status-icons">
+                    <div class="line line-icon"></div>
+                    <div class="line line-icon"></div>
+                    <div class="line line-icon"></div>
+                  </div>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-nav phone-nav">
+                    <div class="line line-logo"></div>
+                    <div class="line line-burger"></div>
+                  </div>
+                  <div class="mockup-hero-section">
+                    <div class="line line-heading"></div>
+                    <div class="line line-subheading"></div>
+                    <div class="line line-text"></div>
+                    <div class="line line-cta-btn"></div>
+                  </div>
+                  <div class="mockup-cards phone-cards">
+                    <div class="mockup-card"></div>
+                    <div class="mockup-card"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -138,7 +204,7 @@
           <div class="stat-lbl">Webs entregadas</div>
         </div>
         <div class="sr sr-d2">
-          <div class="stat-val">3-5</div>
+          <div class="stat-val">5-14</div>
           <div class="stat-lbl">Días de entrega</div>
         </div>
         <div class="sr sr-d3">
@@ -336,7 +402,7 @@
                   stroke-linejoin="round"
                 >
                   <polyline points="20 6 9 17 4 12" /></svg></span
-              >Formulario + botón WhatsApp
+              >Formulario + botones de contacto
             </li>
             <li>
               <span class="ck"
@@ -351,7 +417,7 @@
                   stroke-linejoin="round"
                 >
                   <polyline points="20 6 9 17 4 12" /></svg></span
-              >Entrega en 3-5 días
+              >Entrega en 5-14 días
             </li>
           </ul>
           <a href="#contacto" class="btn btn-ghost">Empezar ahora</a>
@@ -456,6 +522,105 @@
           </ul>
           <a href="#contacto" class="btn btn-glow">Elegir Profesional</a>
         </div>
+        <div class="price-card sr sr-d3">
+          <div class="price-tier-name">Premium</div>
+          <h3>Web a Medida + Automatización</h3>
+          <div class="price-val price-val-custom">Precio a medida</div>
+          <p class="price-sub">Para negocios que necesitan soluciones avanzadas y escalables</p>
+          <ul class="price-list">
+            <li>
+              <span class="ck"
+                ><svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg></span
+              >Todo del plan Profesional
+            </li>
+            <li>
+              <span class="ck"
+                ><svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg></span
+              >Automatizaciones personalizadas (emails, CRM, reservas)
+            </li>
+            <li>
+              <span class="ck"
+                ><svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg></span
+              >SEO avanzado y estrategia de posicionamiento
+            </li>
+            <li>
+              <span class="ck"
+                ><svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg></span
+              >Integraciones con herramientas externas (calendarios, pagos, analytics)
+            </li>
+            <li>
+              <span class="ck"
+                ><svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg></span
+              >Secciones y páginas ilimitadas
+            </li>
+            <li>
+              <span class="ck"
+                ><svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg></span
+              >Soporte prioritario y mantenimiento continuo
+            </li>
+          </ul>
+          <a href="#contacto" class="btn btn-ghost">Pedir presupuesto</a>
+        </div>
       </div>
     </section>
 
@@ -482,8 +647,8 @@
         <div class="test-card sr sr-d2">
           <div class="test-stars">★★★★★</div>
           <blockquote>
-            "No sabía nada de webs y Miguel se encargó de todo. El resultado es
-            espectacular, mis clientes dicen que les da mucha confianza."
+            "No sabía nada de webs se encargaron de todo. El resultado es
+            espectacular, mis clientes dicen que les encanta."
           </blockquote>
           <div class="test-author">
             <div class="test-avatar">JL</div>
@@ -515,10 +680,10 @@
       </div>
       <div class="faq-wrap">
         <div class="faq-item sr">
-          <button class="faq-q">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a1">
             ¿Qué es una landing page? <span class="plus">+</span>
           </button>
-          <div class="faq-a">
+          <div class="faq-a" id="faq-a1" role="region">
             <p>
               Es una página web sencilla pero profesional, pensada para que tus
               clientes te encuentren en Google, vean tus servicios y contacten
@@ -527,10 +692,10 @@
           </div>
         </div>
         <div class="faq-item sr">
-          <button class="faq-q">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a2">
             ¿Cuánto tardáis en entregarla? <span class="plus">+</span>
           </button>
-          <div class="faq-a">
+          <div class="faq-a" id="faq-a2" role="region">
             <p>
               Normalmente entre 3 y 5 días laborables. Antes de empezar siempre
               te damos una fecha concreta de entrega.
@@ -538,10 +703,10 @@
           </div>
         </div>
         <div class="faq-item sr">
-          <button class="faq-q">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a3">
             ¿Hay costes mensuales? <span class="plus">+</span>
           </button>
-          <div class="faq-a">
+          <div class="faq-a" id="faq-a3" role="region">
             <p>
               No. El precio es un pago único. La web es tuya. Solo tendrás el
               coste del hosting y dominio (~5-10€/mes), y te ayudamos a
@@ -550,10 +715,10 @@
           </div>
         </div>
         <div class="faq-item sr">
-          <button class="faq-q">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a4">
             ¿Puedo hacer cambios después? <span class="plus">+</span>
           </button>
-          <div class="faq-a">
+          <div class="faq-a" id="faq-a4" role="region">
             <p>
               ¡Por supuesto! El plan Profesional incluye 2 rondas de revisiones
               y 30 días de soporte. Para cambios posteriores ofrecemos
@@ -562,10 +727,10 @@
           </div>
         </div>
         <div class="faq-item sr">
-          <button class="faq-q">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a5">
             ¿Necesito saber de tecnología? <span class="plus">+</span>
           </button>
-          <div class="faq-a">
+          <div class="faq-a" id="faq-a5" role="region">
             <p>
               Nada en absoluto. Nos encargamos de todo: diseño, desarrollo,
               configuración y puesta en marcha. Tú solo nos dices qué necesitas.
@@ -581,7 +746,7 @@
         Escríbenos y te respondemos en menos de 24 horas. Sin compromiso.
       </p>
       <div class="cta-actions sr">
-        <a href="mailto:novalandingesp@gmail.com" class="btn btn-glow"
+        <a href="mailto:info.novalandings@novalandings.es" class="btn btn-glow"
           ><svg
             width="18"
             height="18"
@@ -597,12 +762,13 @@
             />
             <polyline points="22,6 12,13 2,6" />
           </svg>
-          novalandingesp@gmail.com</a
+          info.novalandings@novalandings.es</a
         >
         <a
           href="https://wa.me/34600000000"
           class="btn btn-ghost"
           target="_blank"
+          enabled = "false"
           ><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
@@ -620,24 +786,29 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <img
-          src="assets\logo\logo-white.png"
+          src="assets/logo/logo-white.png"
           alt="Nova Landings"
-          class="nav-logo-img"
+          class="nav-logo-img" loading="lazy"
           />
           <span class="nova">Nova</span>Landings
         </div>
         <ul class="footer-links">
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#precios">Precios</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="mailto:novalandingesp@gmail.com">Contacto</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+          <li><a href="mailto:info.novalandings@novalandings.es">Contacto</a></li>
         </ul>
         <p class="footer-copy">
           © 2026 Nova Landings · Todos los derechos reservados · Hecho con
-          pasión por Miguel Clemente
+          pasión por Nova Landings.
         </p>
       </div>
     </footer>
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
+      </svg>
+    </a>
     <script src="main.js" defer></script>
   </body>
 </html>
