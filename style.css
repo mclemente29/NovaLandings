@@ -576,13 +576,28 @@
         animation: slideUp 1s var(--ease) 1s forwards;
       }
 
-      .mockup-wrapper {
+      /* Por defecto: desktop visible, mobile oculto */
+      .hero-right-mobile {
+        display: none;
+      }
+
+      /* ---- Wrapper compartido ---- */
+      .mockup-wrapper,
+      .phone-wrapper {
         position: relative;
         width: 100%;
-        max-width: 520px;
         perspective: 1200px;
       }
 
+      .mockup-wrapper {
+        max-width: 520px;
+      }
+
+      .phone-wrapper {
+        max-width: 280px;
+      }
+
+      /* ---- Pantalla desktop (navegador) ---- */
       .mockup-screen {
         background: var(--card);
         border: 1px solid var(--border);
@@ -602,12 +617,9 @@
       }
 
       @keyframes mockupFloat {
-
-        0%,
-        100% {
+        0%, 100% {
           transform: rotateY(-8deg) rotateX(4deg) translateY(0);
         }
-
         50% {
           transform: rotateY(-8deg) rotateX(4deg) translateY(-12px);
         }
@@ -628,17 +640,9 @@
         border-radius: 50%;
       }
 
-      .mockup-dot:nth-child(1) {
-        background: #ff5f57;
-      }
-
-      .mockup-dot:nth-child(2) {
-        background: #febc2e;
-      }
-
-      .mockup-dot:nth-child(3) {
-        background: #28c840;
-      }
+      .mockup-dot:nth-child(1) { background: #ff5f57; }
+      .mockup-dot:nth-child(2) { background: #febc2e; }
+      .mockup-dot:nth-child(3) { background: #28c840; }
 
       .mockup-url {
         margin-left: 12px;
@@ -651,70 +655,194 @@
         text-align: center;
       }
 
+      /* ---- Contenido compartido del mockup (desktop y phone) ---- */
       .mockup-body {
-        padding: 24px;
-        min-height: 280px;
+        padding: 20px;
         position: relative;
       }
 
       .mockup-body .line {
-        height: 8px;
         border-radius: 4px;
-        margin-bottom: 10px;
         background: rgba(255, 255, 255, 0.04);
         animation: shimmer 2s ease-in-out infinite;
       }
 
-      .mockup-body .line:nth-child(1) {
-        width: 60%;
-        height: 20px;
+      /* Barra nav simulada */
+      .mockup-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .line-logo {
+        width: 60px;
+        height: 10px;
+        background: linear-gradient(90deg, rgba(0, 229, 160, 0.3), rgba(0, 229, 160, 0.1)) !important;
+        border-radius: 4px;
+      }
+
+      .mockup-nav-links {
+        display: flex;
+        gap: 10px;
+      }
+
+      .line-nav-link {
+        width: 36px;
+        height: 6px;
+        border-radius: 3px;
+      }
+
+      /* Hero simulado */
+      .mockup-hero-section {
         margin-bottom: 20px;
-        background: linear-gradient(90deg,
-            rgba(0, 229, 160, 0.15),
-            rgba(0, 201, 255, 0.1));
       }
 
-      .mockup-body .line:nth-child(2) {
-        width: 90%;
-      }
-
-      .mockup-body .line:nth-child(3) {
+      .line-heading {
         width: 75%;
+        height: 16px;
+        margin-bottom: 10px;
+        background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.06)) !important;
+        border-radius: 4px;
       }
 
-      .mockup-body .line:nth-child(4) {
-        width: 85%;
+      .line-subheading {
+        width: 55%;
+        height: 10px;
+        margin-bottom: 14px;
+        border-radius: 4px;
       }
 
-      .mockup-body .line:nth-child(5) {
-        width: 40%;
-        height: 30px;
-        margin-top: 20px;
+      .line-text {
+        width: 90%;
+        height: 6px;
+        margin-bottom: 16px;
+        border-radius: 3px;
+      }
+
+      .line-cta-btn {
+        width: 35%;
+        height: 22px;
         border-radius: 100px;
-        background: linear-gradient(90deg, var(--accent), #00c484);
-        opacity: 0.6;
+        background: linear-gradient(90deg, var(--accent), #00c484) !important;
+        opacity: 0.5;
       }
 
-      .mockup-body .line:nth-child(6) {
-        width: 100%;
-        height: 80px;
-        margin-top: 20px;
-        border-radius: 12px;
+      /* Tarjetas simuladas */
+      .mockup-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .mockup-card {
+        height: 70px;
+        border-radius: 10px;
         background: linear-gradient(135deg,
-            rgba(0, 229, 160, 0.08),
-            rgba(0, 201, 255, 0.05));
+            rgba(255, 255, 255, 0.04),
+            rgba(0, 229, 160, 0.04));
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        animation: shimmer 2s ease-in-out infinite;
+      }
+
+      .mockup-card:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+
+      .mockup-card:nth-child(3) {
+        animation-delay: 0.6s;
       }
 
       @keyframes shimmer {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
 
-        0%,
-        100% {
-          opacity: 0.6;
-        }
+      /* ---- Mockup teléfono ---- */
+      .phone-frame {
+        background: #1a1a1f;
+        border: 2px solid rgba(255, 255, 255, 0.12);
+        border-radius: 36px;
+        padding: 12px;
+        position: relative;
+        box-shadow:
+          0 40px 80px rgba(0, 0, 0, 0.5),
+          0 0 40px var(--glow2),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        animation: phoneFloat 6s ease-in-out infinite;
+      }
 
-        50% {
-          opacity: 1;
-        }
+      @keyframes phoneFloat {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+
+      .phone-notch {
+        width: 100px;
+        height: 22px;
+        background: #1a1a1f;
+        border-radius: 0 0 16px 16px;
+        margin: 0 auto;
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .phone-screen {
+        background: var(--card);
+        border-radius: 24px;
+        overflow: hidden;
+        min-height: 420px;
+      }
+
+      .phone-status-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px 8px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--text2);
+      }
+
+      .phone-status-icons {
+        display: flex;
+        gap: 4px;
+      }
+
+      .line-icon {
+        width: 14px;
+        height: 6px;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.15) !important;
+      }
+
+      /* Nav del phone: logo + burger */
+      .phone-nav {
+        margin-bottom: 16px !important;
+      }
+
+      .line-burger {
+        width: 18px;
+        height: 10px;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.12) !important;
+      }
+
+      /* Cards del phone: 2 columnas (más estrecho) */
+      .phone-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      .phone-cards .mockup-card {
+        height: 55px;
       }
 
       .mockup-glow {
@@ -1008,9 +1136,9 @@
       */
       .pricing-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-        max-width: 900px;
+        max-width: 1200px;
         margin: 0 auto;
         align-items: stretch;
       }
@@ -1086,6 +1214,13 @@
         font-weight: 800;
         line-height: 1;
         margin-bottom: 0.3rem;
+      }
+
+      .price-val-custom {
+        font-size: 1.8rem;
+        font-family: var(--font-b);
+        color: var(--text2);
+        padding: 0.5rem 0;
       }
 
       .price-val small {
@@ -1488,6 +1623,39 @@
          - 768px: Tablets portrait/móviles - menú hamburger activo, columnas simples
       */
 
+      /* Botón volver arriba */
+      .back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--card);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text);
+        z-index: 900;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(10px);
+        transition: opacity 0.3s, transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .back-to-top:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        box-shadow: 0 0 20px var(--glow2);
+      }
+
       /* Breakpoint para tablets landscape (1024px) */
       @media (max-width: 1024px) {
         /* Hero section: pasar de dos columnas a una sola */
@@ -1505,9 +1673,13 @@
           justify-content: center;
         }
 
-        /* Ocultar mockup en tablets (economizar espacio) */
-        .hero-right {
+        /* En tablets: ocultar mockup desktop, mostrar mockup teléfono */
+        .hero-right-desktop {
           display: none;
+        }
+
+        .hero-right-mobile {
+          display: flex;
         }
 
         /* Grids: de 3 columnas a 2 */
@@ -1519,8 +1691,18 @@
           grid-template-columns: repeat(2, 1fr);
         }
 
+        .pricing-grid {
+          grid-template-columns: 1fr;
+          max-width: 500px;
+        }
+
         .stats-inner {
           grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* Ocultar botón volver arriba en tablets y móviles */
+        .back-to-top {
+          display: none;
         }
       }
 
@@ -1528,6 +1710,21 @@
       @media (max-width: 768px) {
         nav {
           padding: 1rem 1.5rem;
+        }
+
+        /* Bloquear scroll del body cuando el menú está abierto */
+        body.menu-open {
+          overflow: hidden;
+        }
+
+        /* Quitar backdrop-filter del nav cuando el menú está abierto
+           para que no cree un containing block que rompa el position:fixed del menú.
+           transition: none evita que el backdrop-filter se anime gradualmente
+           (por el transition: all 0.5s del nav), lo que causaba que el menú
+           se viese "atrapado" en el nav durante la transición. */
+        body.menu-open nav {
+          backdrop-filter: none !important;
+          transition: none;
         }
 
         /* Menú hamburger: inicialmente oculto, se muestra con clase 'open' */
@@ -1569,6 +1766,15 @@
 
         .hero-tag {
           justify-content: center;
+        }
+
+        /* Reducir tamaño del phone mockup en móviles */
+        .phone-wrapper {
+          max-width: 220px;
+        }
+
+        .phone-screen {
+          min-height: 350px;
         }
 
         .section {
@@ -1616,5 +1822,13 @@
         .footer-links {
           justify-content: center;
           flex-wrap: wrap;
+        }
+
+        /* En móviles no hay hover, así que los btn-ghost llevan
+           una iluminación blanca permanente en el borde para que
+           destaquen sobre el fondo oscuro */
+        .btn-ghost {
+          border-color: rgba(255, 255, 255, 0.35);
+          box-shadow: 0 0 12px rgba(255, 255, 255, 0.08), inset 0 0 12px rgba(255, 255, 255, 0.03);
         }
       }
