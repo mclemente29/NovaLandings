@@ -214,10 +214,12 @@ document.querySelectorAll(".faq-q").forEach((q) => {
     q.addEventListener("click", () => {
         const item = q.parentElement;
         const o = item.classList.contains("open");
-        document
-            .querySelectorAll(".faq-item")
-            .forEach((i) => i.classList.remove("open"));
-        if (!o) item.classList.add("open");
+        document.querySelectorAll(".faq-item").forEach((i) => i.classList.remove("open"));
+        document.querySelectorAll(".faq-q").forEach((b) => b.setAttribute("aria-expanded", "false"));
+        if (!o) {
+            item.classList.add("open");
+            q.setAttribute("aria-expanded", "true");
+        }
     });
 });
 // COUNTER
