@@ -225,6 +225,6 @@ Copyright © 2025 Nova Landings
 
 **Hecho con ❤️ para emprendedores y pequeños comercios**
 
-[🌐 Ver en vivo](#) • [📧 Contacto](#) • [⭐ GitHub](#)
+[🌐 Ver en vivo](https://novalandings.es) • [📧 Contacto](mailto:info.novalandings@novalandings.es) • [⭐ GitHub](#)
 
 </div>

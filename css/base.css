@@ -1,0 +1,110 @@
+/* ========================================
+   BASE — Reset, variables, estilos globales
+   ======================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   SISTEMA DE VARIABLES Y TEMAS
+   ========================================
+   Este bloque define el sistema de diseño completo del proyecto.
+   Utiliza variables CSS para mantener consistencia en colores,
+   tipografías y funciones de animación reutilizables.
+*/
+:root {
+  /* Escala de colores de fondo - tonos oscuros para tema dark */
+  --bg: #050508;
+  --bg2: #0a0a10;
+  --surface: #0e0e16;
+  --card: #111120;
+
+  /* Colores de bordes con transparencia para efectos sutiles */
+  --border: rgba(255, 255, 255, 0.06);
+
+  /* Paleta de acentos: verde primario y azul cian */
+  --accent: #00e5a0;
+  --accent2: #00c9ff;
+  --accent-warm: #ff6b4a;
+
+  /* Efectos de brillo (glow) con opacidad controlada */
+  --glow: rgba(0, 229, 160, 0.15);
+  --glow2: rgba(0, 201, 255, 0.12);
+
+  /* Jerarquía de colores de texto: primario, secundario, terciario */
+  --text: #eeeef2;
+  --text2: #8b8ba0;
+  --text3: #55556a;
+
+  /* Tipografías: serif para headings, sans-serif para cuerpo */
+  --font-h: "Playfair Display", Georgia, serif;
+  --font-b: "Outfit", system-ui, sans-serif;
+
+  /* Curvas de animación personalizadas para comportamiento natural */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ========================================
+   ESTILOS BASE DEL DOCUMENTO
+   ========================================
+   Configuración fundamental para scroll suave y scrollbar personalizada
+*/
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--bg);
+}
+
+/* Estilos de scrollbar para navegadores Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* Configuración de body: tema oscuro con antialiasing para mejor legibilidad */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-b);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+/* Restablecer estilos por defecto de enlaces */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Efecto de ruido fractal sutil de fondo para profundidad visual */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+#scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}

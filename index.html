@@ -4,30 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nova Landings — Tu Web Profesional</title>
-    <meta name="description" content="Creamos landing pages profesionales desde 120€. Diseño web a medida, SEO incluido y entrega en 5-14 días. Pago único, sin mensualidades. Tu negocio merece una web que impresione.">
-
+    <meta
+      name="description"
+      content="Creamos landing pages profesionales desde 120€. Diseño web a medida, SEO incluido y entrega en 5-14 días. Tu negocio merece una web que impresione y capte cliente de verdad."
+    />
+    
+    <!-- Google Tag Manager (carga condicional por consentimiento de cookies) -->
+    <script>
+      function loadGTM() {
+        if (window._gtmLoaded) return;
+        window._gtmLoaded = true;
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-PMR6LFN9");
+      }
+      if (localStorage.getItem("cookie-consent") === "accepted") loadGTM();
+    </script>
+    <!-- End Google Tag Manager -->
+     
     <!-- Open Graph (Facebook, WhatsApp, LinkedIn, Telegram) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://novalandings.es/">
-    <meta property="og:title" content="Nova Landings — Páginas web profesionales desde 120€">
-    <meta property="og:description" content="Landing pages que convierten visitantes en clientes. Diseño a medida, SEO incluido y entrega en 5-14 días.">
-    <meta property="og:image" content="https://novalandings.es/assets/logo-black.png">
-    <meta property="og:locale" content="es_ES">
-    <meta property="og:site_name" content="Nova Landings">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://novalandings.es/" />
+    <meta
+      property="og:title"
+      content="Nova Landings — Páginas web profesionales desde 120€"
+    />
+    <meta
+      property="og:description"
+      content="Landing pages que convierten visitantes en clientes. Diseño a medida, SEO incluido y entrega en 5-14 días."
+    />
+    <meta
+      property="og:image"
+      content="https://novalandings.es/assets/og_image_novalandings.png"
+    />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Nova Landings" />
 
     <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Nova Landings — Páginas web profesionales desde 120€">
-    <meta name="twitter:description" content="Landing pages que convierten visitantes en clientes. Diseño a medida, SEO incluido y entrega en 5-14 días.">
-    <meta name="twitter:image" content="https://novalandings.es/assets/logo-black.png">
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Nova Landings — Páginas web profesionales desde 120€"
+    />
+    <meta
+      name="twitter:description"
+      content="Landing pages que convierten visitantes en clientes. Diseño a medida, SEO incluido y entrega en 5-14 días."
+    />
+    <meta
+      name="twitter:image"
+      content="https://novalandings.es/assets/og_image_novalandings.png"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
-    rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="assets/favicon/icono-black.ico" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/home.css" />
+
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PMR6LFN9"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <canvas id="scene"></canvas>
     <div class="cursor-ring" id="cursorRing"></div>
     <div class="cursor-dot" id="cursorDot"></div>
@@ -46,6 +103,7 @@
         <li><a href="#proceso">Proceso</a></li>
         <li><a href="#precios">Precios</a></li>
         <li><a href="#faq">Preguntas Frecuentes</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="#contacto" class="nav-cta">Contáctanos</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -79,7 +137,8 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" /></svg></a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
             <a href="#proceso" class="btn btn-ghost">Ver cómo funciona</a>
           </div>
         </div>
@@ -526,7 +585,9 @@
           <div class="price-tier-name">Premium</div>
           <h3>Web a Medida + Automatización</h3>
           <div class="price-val price-val-custom">Precio a medida</div>
-          <p class="price-sub">Para negocios que necesitan soluciones avanzadas y escalables</p>
+          <p class="price-sub">
+            Para negocios que necesitan soluciones avanzadas y escalables
+          </p>
           <ul class="price-list">
             <li>
               <span class="ck"
@@ -586,7 +647,8 @@
                   stroke-linejoin="round"
                 >
                   <polyline points="20 6 9 17 4 12" /></svg></span
-              >Integraciones con herramientas externas (calendarios, pagos, analytics)
+              >Integraciones con herramientas externas (calendarios, pagos,
+              analytics)
             </li>
             <li>
               <span class="ck"
@@ -768,7 +830,7 @@
           href="https://wa.me/34600000000"
           class="btn btn-ghost"
           target="_blank"
-          enabled = "false"
+          enabled="false"
           ><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
@@ -786,9 +848,10 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <img
-          src="assets/logo/logo-white.png"
-          alt="Nova Landings"
-          class="nav-logo-img" loading="lazy"
+            src="assets/logo/logo-white.png"
+            alt="Nova Landings"
+            class="nav-logo-img"
+            loading="lazy"
           />
           <span class="nova">Nova</span>Landings
         </div>
@@ -796,19 +859,51 @@
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#precios">Precios</a></li>
           <li><a href="#faq">Preguntas Frecuentes</a></li>
-          <li><a href="mailto:info.novalandings@novalandings.es">Contacto</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li>
+            <a href="mailto:info.novalandings@novalandings.es">Contacto</a>
+          </li>
         </ul>
         <p class="footer-copy">
           © 2026 Nova Landings · Todos los derechos reservados · Hecho con
           pasión por Nova Landings.
         </p>
+        <div class="footer-legal">
+          <a href="legal.html#privacidad">Política de Privacidad</a>
+          <a href="legal.html#cookies">Política de Cookies</a>
+          <a href="#" id="cookieSettings">Configurar cookies</a>
+        </div>
       </div>
     </footer>
     <a href="#" class="back-to-top" id="backToTop" aria-label="Volver arriba">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="18 15 12 9 6 15"/>
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="18 15 12 9 6 15" />
       </svg>
     </a>
-    <script src="main.js" defer></script>
+    <!-- Banner de cookies -->
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-inner">
+        <div class="cookie-banner-text">
+          <p>Usamos cookies analíticas (Google Analytics) para entender cómo se usa nuestra web y mejorarla. No recopilamos datos personales con fines publicitarios.</p>
+          <a href="legal.html#cookies" class="cookie-banner-link">Más información</a>
+        </div>
+        <div class="cookie-banner-actions">
+          <button class="btn btn-glow cookie-accept" id="cookieAccept">Aceptar todas</button>
+          <button class="btn btn-ghost cookie-reject" id="cookieReject">Solo necesarias</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/scene.js" defer></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
