@@ -1,0 +1,167 @@
+/* ========================================
+   LEGAL — ESTILOS ESPECÍFICOS
+   ========================================
+   Sobreescribe los estilos inline de Termly
+   para adaptarlos al tema oscuro de Nova Landings.
+*/
+
+/* --- Contenedor principal --- */
+.legal-content {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 10rem 3rem 4rem;
+}
+
+/* --- Eliminar logo de Termly --- */
+.legal-content > span[style*="background: url(data:image"] {
+  display: none !important;
+}
+
+/* --- Sobreescritura de estilos data-custom-class --- */
+[data-custom-class='body'],
+[data-custom-class='body'] * {
+  background: transparent !important;
+}
+
+[data-custom-class='title'],
+[data-custom-class='title'] * {
+  font-family: var(--font-h) !important;
+  font-size: clamp(2rem, 5vw, 2.8rem) !important;
+  color: var(--text) !important;
+  letter-spacing: -1px;
+}
+
+[data-custom-class='subtitle'],
+[data-custom-class='subtitle'] * {
+  font-family: var(--font-b) !important;
+  color: var(--text2) !important;
+  font-size: 0.95rem !important;
+}
+
+[data-custom-class='heading_1'],
+[data-custom-class='heading_1'] * {
+  font-family: var(--font-h) !important;
+  font-size: 1.5rem !important;
+  color: var(--text) !important;
+  letter-spacing: -0.5px;
+}
+
+[data-custom-class='heading_2'],
+[data-custom-class='heading_2'] * {
+  font-family: var(--font-h) !important;
+  font-size: 1.2rem !important;
+  color: var(--text) !important;
+}
+
+[data-custom-class='body_text'],
+[data-custom-class='body_text'] * {
+  color: var(--text2) !important;
+  font-size: 0.92rem !important;
+  font-family: var(--font-b) !important;
+  line-height: 1.7 !important;
+}
+
+[data-custom-class='link'],
+[data-custom-class='link'] * {
+  color: var(--accent) !important;
+  font-size: 0.92rem !important;
+  font-family: var(--font-b) !important;
+  word-break: break-word !important;
+  transition: opacity 0.3s;
+}
+
+[data-custom-class='link']:hover {
+  opacity: 0.8;
+}
+
+/* --- Headings dentro del contenido legal --- */
+.legal-content h1 {
+  font-family: var(--font-h);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.legal-content h2 {
+  font-family: var(--font-h);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.legal-content h3 {
+  font-family: var(--font-b);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* --- Listas --- */
+.legal-content ul {
+  padding-left: 1.5rem;
+}
+
+.legal-content ul li {
+  color: var(--text2);
+  font-size: 0.92rem;
+  font-family: var(--font-b);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Tablas (si las hay) --- */
+.legal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.legal-content table td,
+.legal-content table th {
+  border: 1px solid var(--border);
+  padding: 0.8rem 1rem;
+  font-size: 0.88rem;
+  font-family: var(--font-b);
+  color: var(--text2);
+  vertical-align: top;
+}
+
+.legal-content table th {
+  color: var(--text);
+  font-weight: 600;
+  background: var(--surface);
+}
+
+/* --- Separador entre secciones --- */
+.legal-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 5rem 0 3rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .legal-content {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .legal-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .legal-content h2 {
+    font-size: 1.25rem;
+  }
+}
