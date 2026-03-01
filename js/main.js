@@ -115,11 +115,13 @@ const cObs = new IntersectionObserver(
 );
 const sb = document.querySelector(".stats-bar");
 if (sb) cObs.observe(sb);
-// SMOOTH SCROLL
+// SMOOTH SCROLL (excluir links con href="#" solo, para no bloquear otros handlers)
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        if (href === "#") return;
         e.preventDefault();
-        const t = document.querySelector(this.getAttribute("href"));
+        const t = document.querySelector(href);
         if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 });

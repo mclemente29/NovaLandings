@@ -289,6 +289,7 @@ nav.scrolled {
 /* Animación de icono dentro del botón */
 .btn svg {
   transition: transform 0.3s;
+  flex-shrink: 0;
 }
 
 .btn:hover svg {
@@ -640,6 +641,18 @@ footer {
   .footer-links {
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  /* Botones del CTA: ancho completo y centrado en móvil */
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
   /* En móviles no hay hover, así que los btn-ghost llevan
