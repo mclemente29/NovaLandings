@@ -6,7 +6,25 @@
     <title>Portfolio — Nova Landings</title>
     <meta name="description" content="Descubre los proyectos web que hemos creado en Nova Landings. Landing pages profesionales para negocios reales.">
 
-    <!-- Google Tag Manager (carga condicional por consentimiento de cookies) -->
+    <!-- Google Analytics (carga condicional por consentimiento de cookies) -->
+    <script>
+      function loadGA() {
+        if (window._gaLoaded) return;
+        window._gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6PJTETXCRS';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-6PJTETXCRS');
+      }
+      if (localStorage.getItem("cookie-consent") === "accepted") loadGA();
+    </script>
+
+    <!-- Google Tag Manager (desactivado, se usa gtag.js directamente)
     <script>
       function loadGTM() {
         if (window._gtmLoaded) return;
@@ -24,7 +42,7 @@
       }
       if (localStorage.getItem("cookie-consent") === "accepted") loadGTM();
     </script>
-    <!-- End Google Tag Manager -->
+    -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
@@ -34,7 +52,7 @@
 
     <!-- Open Graph (Facebook, WhatsApp, LinkedIn, Telegram) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://novalandings.es/portfolio.html" />
+    <meta property="og:url" content="https://novalandings.es/portfolio" />
     <meta property="og:title" content="Portfolio — Nova Landings" />
     <meta property="og:description" content="Descubre los proyectos web que hemos creado en Nova Landings. Landing pages profesionales para negocios reales." />
     <meta property="og:image" content="https://novalandings.es/assets/logo/og_image_novalandings.png" />
@@ -68,7 +86,7 @@
     <div class="cursor-dot" id="cursorDot"></div>
 
     <nav id="nav">
-      <a href="index.html" class="nav-logo">
+      <a href="/" class="nav-logo">
         <img
           src="assets/logo/logo-white.png"
           alt="Nova Landings"
@@ -77,12 +95,12 @@
         <span class="dot"></span><span class="nova">Nova</span>Landings
       </a>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html#servicios">Servicios</a></li>
-        <li><a href="index.html#proceso">Proceso</a></li>
-        <li><a href="index.html#precios">Precios</a></li>
-        <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
-        <li><a href="portfolio.html" class="nav-active">Portfolio</a></li>
-        <li><a href="index.html#contacto" class="nav-cta">Contáctanos</a></li>
+        <li><a href="/#servicios">Servicios</a></li>
+        <li><a href="/#proceso">Proceso</a></li>
+        <li><a href="/#precios">Precios</a></li>
+        <li><a href="/#faq">Preguntas Frecuentes</a></li>
+        <li><a href="portfolio" class="nav-active">Portfolio</a></li>
+        <li><a href="/#contacto" class="nav-cta">Contáctanos</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -205,7 +223,7 @@
             <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
           </svg>
         </a>
-        <a href="index.html#precios" class="btn btn-ghost">
+        <a href="/#precios" class="btn btn-ghost">
           Ver precios
         </a>
       </div>
@@ -223,9 +241,9 @@
           <span class="nova">Nova</span>Landings
         </div>
         <ul class="footer-links">
-          <li><a href="index.html#servicios">Servicios</a></li>
-          <li><a href="index.html#precios">Precios</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="/#servicios">Servicios</a></li>
+          <li><a href="/#precios">Precios</a></li>
+          <li><a href="portfolio">Portfolio</a></li>
           <li><a href="mailto:info.novalandings@novalandings.es">Contacto</a></li>
         </ul>
         <p class="footer-copy">
@@ -233,8 +251,8 @@
           pasión por Nova Landings.
         </p>
         <div class="footer-legal">
-          <a href="legal.html#privacidad">Política de Privacidad</a>
-          <a href="legal.html#cookies">Política de Cookies</a>
+          <a href="legal#privacidad">Política de Privacidad</a>
+          <a href="legal#cookies">Política de Cookies</a>
           <a href="#" id="cookieSettings">Configurar cookies</a>
         </div>
       </div>
@@ -245,7 +263,7 @@
       <div class="cookie-banner-inner">
         <div class="cookie-banner-text">
           <p>Usamos cookies analíticas (Google Analytics) para entender cómo se usa nuestra web y mejorarla. No recopilamos datos personales con fines publicitarios.</p>
-          <a href="legal.html#cookies" class="cookie-banner-link">Más información</a>
+          <a href="legal#cookies" class="cookie-banner-link">Más información</a>
         </div>
         <div class="cookie-banner-actions">
           <button class="btn btn-glow cookie-accept" id="cookieAccept">Aceptar todas</button>

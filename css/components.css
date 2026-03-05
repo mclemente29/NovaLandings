@@ -286,6 +286,13 @@ nav.scrolled {
   transform: translateY(-2px);
 }
 
+/* Botón deshabilitado */
+.btn-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* Animación de icono dentro del botón */
 .btn svg {
   transition: transform 0.3s;

@@ -1,0 +1,17 @@
+# Activar el motor de reescritura
+RewriteEngine On
+
+# Redirigir URLs con .html a URLs limpias (301 permanente)
+# Ejemplo: /portfolio.html → /portfolio
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Caso especial: /index → /
+RewriteRule ^index$ / [R=301,L]
+
+# Internamente servir el archivo .html cuando se accede sin extensión
+# Ejemplo: /portfolio → sirve portfolio.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]

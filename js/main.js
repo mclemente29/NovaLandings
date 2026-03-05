@@ -178,7 +178,7 @@ document
         acceptBtn.addEventListener("click", function () {
             localStorage.setItem("cookie-consent", "accepted");
             hideBanner();
-            if (typeof loadGTM === "function") loadGTM();
+            if (typeof loadGA === "function") loadGA();
         });
     }
 
